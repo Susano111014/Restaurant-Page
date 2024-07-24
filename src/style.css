@@ -1,0 +1,20 @@
+body {
+    height: 100vh;
+}
+
+.d {
+    background-color: rgb(0, 0, 0);
+
+}
+
+.Nav {
+    background-color: blueviolet;
+}
+
+#content{
+    background-color: rgb(124, 247, 247);
+}
+
+#description {
+    color: red;
+}
