@@ -2,8 +2,9 @@
 <img src="" alt="An image">
 <p>An awesome description of the Restaurant</p> */
 // export { CreateChildElements};
-export {divHeader, headerTitle, headerText, headerImg};
-export default CreateChildElements;
+// export {divHeader, headerTitle, headerText, headerImg};
+// export default CreateChildElements;
+export {HomeModule};
 import './style.css';
 function CreateChildElements(parent, child) {
     class Content {
@@ -33,6 +34,7 @@ function CreateChildElements(parent, child) {
     return newChild;
 }
 
+function HomeModule () {
 const divHeader = document.getElementById('content');
 
 const headerTitle = CreateChildElements(divHeader, 'h1');
@@ -47,3 +49,4 @@ const headerImg = CreateChildElements(divHeader, 'img');
 headerImg.AddId('header-image');
 headerImg.AddAttribute('header-image', 'src', 'no se');
 headerImg.AddAttribute('header-image', 'alt', 'This is an image');
+};

@@ -1,3 +1,4 @@
 console.log('hello world');
- import {divHeader ,headerTitle, headerText, headerImg} from './content';
-//  import './style.css';
+ import {ModuleHeader} from './content';
+
+ HomeModule();
