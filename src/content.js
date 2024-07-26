@@ -15,13 +15,13 @@ function CreateChildElements(parent, child) {
             this.parent = parent;
             this.child = child;
         }
-        AddId(id){
+        AddId(id) {
             const childId = document.createElement(this.child);
             childId.setAttribute('id', id);
             this.parent.appendChild(childId);
             this.savedId = {
                 getId: id,
-                get getElement () { return document.getElementById(this.getId)}
+                get getElement() { return document.getElementById(this.getId) }
             };
 
         }
@@ -94,4 +94,20 @@ function HomeModule() {
     aboutUs.AddId('img-about');
     aboutUs.AddAttribute('img-about', 'src', imgAbout);
 
+    const homePageImg = Array.from([menu.savedId.getElement,
+    reservation.savedId.getElement,
+    aboutUs.savedId.getElement]);
+
+    associateClass(homePageImg, 'HomePage-img');
 };
+
+function associateClass(myArray, Class) {
+    arguments[0].forEach(element => {
+        element.classList.add(Class);
+    });
+}
+const homePageImg = Array.from([menu.savedId.getElement,
+reservation.savedId.getElement,
+aboutUs.savedId.getElement]);
+
+associateClass(homePageImg, 'HomePage-img');
