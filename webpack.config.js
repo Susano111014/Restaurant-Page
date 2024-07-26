@@ -26,10 +26,14 @@ module.exports = {
     module: {
         rules: [{
             test: /\.css$/,
-            use: ['style-loader', 'css-loader'],
+            use: ['style-loader', 'css-loader']
         },
         {
-            test: /\.(png|svg|jpg|jpeg|gif)$/i,
+            test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
+            type: 'asset/resource',
+        },
+        {
+            test: /\.(mp4|MP4)$/i,
             type: 'asset/resource',
         },
         ]

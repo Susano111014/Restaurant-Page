@@ -1,4 +1,3 @@
 console.log('hello world');
- import {ModuleHeader} from './content';
-
+ import {HomeModule} from './content';
  HomeModule();
