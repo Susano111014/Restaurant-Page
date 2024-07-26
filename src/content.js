@@ -106,8 +106,3 @@ function associateClass(myArray, Class) {
         element.classList.add(Class);
     });
 }
-const homePageImg = Array.from([menu.savedId.getElement,
-reservation.savedId.getElement,
-aboutUs.savedId.getElement]);
-
-associateClass(homePageImg, 'HomePage-img');
