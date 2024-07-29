@@ -3,9 +3,13 @@ export { CreateChildElements };
 export { HomeModule };
 import './style.css';
 import './Video.mp4';
-import imgMenu from './assets/menu.webp';
-import imgReserve from './assets/reservation.webp';
-import imgAbout from './assets/about.webp';
+import imgMenuG from './assets/menuG.jpg';
+import imgReserveG from './assets/reservationG.webp';
+import imgAboutG from './assets/aboutG.jpg';
+
+import imgMenuS from './assets/menuS.jpg';
+import imgReserveS from './assets/reservationS.jpg';
+import imgAboutS from './assets/aboutS.jpg';
 
 function CreateChildElements(parent, child) {
 
@@ -83,15 +87,21 @@ function HomeModule() {
 
     const menu = CreateChildElements(menuContainer.savedId.getElement, 'img');
     menu.AddId('img-menu');
-    menu.AddAttribute('img-menu', 'src', imgMenu);
+    menu.AddAttribute('img-menu', 'src', imgMenuG);
+    menu.AddAttribute('img-menu', 'srcset',`${imgMenuS} 400w, ${imgMenuG} 800w`);
+    menu.AddAttribute('img-menu', 'sizes', '(max-width: 800px) 800px, 400px');
 
     const reservation = CreateChildElements(reserveContainer.savedId.getElement, 'img');
     reservation.AddId('img-reserve');
-    reservation.AddAttribute('img-reserve', 'src', imgReserve);
+    reservation.AddAttribute('img-reserve', 'src', imgReserveG);
+    reservation.AddAttribute('img-reserve', 'srcset',`${imgReserveS} 400w, ${imgReserveG} 800w`);
+    reservation.AddAttribute('img-reserve', 'sizes', '(max-width: 800px) 800px, 400px');
 
     const aboutUs = CreateChildElements(aboutContainer.savedId.getElement, 'img');
     aboutUs.AddId('img-about');
-    aboutUs.AddAttribute('img-about', 'src', imgAbout);
+    aboutUs.AddAttribute('img-about', 'src', imgAboutG);
+    aboutUs.AddAttribute('img-about', 'srcset',`${imgAboutS} 400w, ${imgAboutG} 800w`);
+    aboutUs.AddAttribute('img-about', 'sizes', '(max-width: 800px) 800px, 400px');
 
     const homePageImg = Array.from([menu.savedId.getElement,
     reservation.savedId.getElement,

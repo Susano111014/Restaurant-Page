@@ -1,8 +1,5 @@
-body {
-    height: 100vh;
-}
 
-.d {
+ .d {
     background-color: rgb(0, 0, 0);
 
 }
@@ -11,25 +8,39 @@ body {
     background-color: blueviolet;
 }
 
-#content{
+#content {
     background-color: rgb(124, 247, 247);
     display: grid;
-    grid-template-columns:repeat(3fr); 
-    grid-row: repeat(3fr);
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows:auto;
+    grid-template-areas:
+    "video menu"
+    "video reserve"
+    "video about-us";
+} 
+
+/* .HomePage-img {
+    width: 336px;
+    height: 141px;
+}   */
+
+/* #img-menu {
+    width: 400px;
+    height: 320px;
+} */
+
+#video-container {
+    grid-area: video;
 }
 
-/* #header-video {
-    width: 300px;
-    height: 300px;
+#header-video {
+    max-width: 100%;
 }
 
-#img-menu {
-    width: 350px;
-    height: px;
+#container-menu {
+    grid-area: menu;
 }
 
 #container-about {
-    width: 350px;
-    height: 250px;
-} */
-
+    grid-area: about-us;
+} 
