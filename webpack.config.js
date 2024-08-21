@@ -7,9 +7,7 @@ module.exports = {
     devtool: 'inline-source-map',
     devServer: {
         static: './dist',
-        watchFiles: ['src/**/*.css', 'src/**/*.html'],
     },
-    devtool: 'inline-source-map',
     plugins: [new HtmlWebpackPlugin({
         template: './src/index.html',
         title: 'Restaurant Page',
@@ -36,6 +34,14 @@ module.exports = {
             test: /\.(mp4|MP4)$/i,
             type: 'asset/resource',
         },
+        {
+            test: /\.(woff|woff2|eot|ttf|otf)$/i,
+            type: 'asset/resource',
+        },
+        {
+            test: /\..html$/i,
+            loader: "html-loader"
+        }
         ]
     },
 
